@@ -232,7 +232,7 @@ export default function App() {
 
                 <div className="bg-white rounded-xl shadow-lg p-2">
                     <h2 className="text-xl font-semibold mb-4 px-4 pt-4">2. Preview & Refine</h2>
-                    <div id="resume-preview-container" className="bg-gray-50 p-1 rounded-lg h-full overflow-y-auto">
+                    <div id="resume-preview-container"  className="resume-preview-container bg-gray-50 p-1 rounded-lg h-full overflow-y-auto">
                         {isLoading && ( <div className="flex justify-center items-center h-full flex-col text-center p-8"><div className="animate-spin rounded-full h-16 w-16 border-b-4 border-blue-600"></div><p className="mt-4 text-gray-600 font-semibold">The AI is building your resume...</p></div> )}
                         {error && ( <div className="flex justify-center items-center h-full p-4"><div className="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 rounded-md" role="alert"><p className="font-bold">Error</p><p>{error}</p></div></div> )}
                         {!isLoading && !error && !resumeData && ( <div className="flex justify-center items-center h-full flex-col text-center p-8"><svg className="w-24 h-24 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg><p className="mt-4 text-gray-500">Your generated resume will appear here.</p></div> )}
@@ -292,6 +292,11 @@ export default function App() {
                     </div>
                 </div>
             </main>
+             <footer className="text-center py-4 text-sm text-gray-500">
+                <p>
+                    Created by <a href="https://www.linkedin.com/in/sjstar/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Sahil Jaglan</a>.
+                </p>
+            </footer>
         </div>
     );
 }
